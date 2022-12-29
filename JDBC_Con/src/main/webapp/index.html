@@ -8,18 +8,27 @@
 <title>Singup Page</title>
 
 </head>
+
 <script type="text/javascript">
-	function valdation() {
-		pass1 = document.getElementById("upass").value;
-		pass2 = document.getElementById("conpass").value;
-		if (pass1.length == 8) {
-			if (pass1 == pass2) {
+	function valdation() 
+	{
+		var pass1 = document.getElementById("upass").value;
+		var passlen = pass1.length;
+		var pass2 = document.getElementById("conpass").value;
+		if (passlen >= 8) 
+		{
+			if (pass1 == pass2)
+			{
 				return true;
-			} else {
+			} 
+			else 
+			{
 				alert("Your entered password and conform password are not macthing");
 				return false;
 			}
-		} else {
+		}
+		else 
+		{
 			alert("You need to enter more then eight character length");
 			return false;
 		}
@@ -81,7 +90,7 @@ form div {
 					placeholder="Enter the Password" id="upass" name="upass">
 			</div>
 			<div>
-				<label>Conform_Password : </label> <input type="conpwd"
+				<label>Conform_Password : </label> <input type="password"
 					autocomplete="off" placeholder="Enter the Password" id="conpass"
 					name="conpass">
 			</div>

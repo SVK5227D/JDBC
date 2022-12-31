@@ -10,25 +10,18 @@
 </head>
 
 <script type="text/javascript">
-	function valdation() 
-	{
+	function valdation() {
 		var pass1 = document.getElementById("upass").value;
 		var passlen = pass1.length;
 		var pass2 = document.getElementById("conpass").value;
-		if (passlen >= 8) 
-		{
-			if (pass1 == pass2)
-			{
+		if (passlen >= 8) {
+			if (pass1 == pass2) {
 				return true;
-			} 
-			else 
-			{
+			} else {
 				alert("Your entered password and conform password are not macthing");
 				return false;
 			}
-		}
-		else 
-		{
+		} else {
 			alert("You need to enter more then eight character length");
 			return false;
 		}
